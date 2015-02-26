@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>navigationItems</key>
+	<array>
+		<dict>
+			<key>isHome</key>
+			<true/>
+			<key>id</key>
+			<string>home_page</string>
+			<key>label</key>
+			<string>Home</string>
+			<key>fontAwesomeIcon</key>
+			<string>fa-home</string>
+			<key>url</key>
+			<string>dynamic</string>
+			<key>dynamicUrlDescriptor</key>
+			<dict>
+				<key>appPrefId</key>
+				<string>my_app_preff_id</string>
+				<key>idOfNavItemToShowIfBlank</key>
+				<string>settings_nav_item</string>
+			</dict>
+			<key>hideWebviewToolbar</key>
+			<true/>
+			<key>eventToFireOnLoad</key>
+			<string>myHomePageEvent</string>
+			<key>jsThatMustBeTrueBeforeFiringEvent</key>
+			<string>window.userHasReachedHomePage</string>
+		</dict>
+		<dict>
+			<key>label</key>
+			<string>Settings</string>
+			<key>id</key>
+			<string>settings_nav_item</string>
+			<key>fontAwesomeIcon</key>
+			<string>fa-gear</string>
+			<key>url</key>
+			<string>dynamic</string>
+			<key>dynamicUrlDescriptor</key>
+			<dict>
+				<key>appPrefId</key>
+				<string>settings_url</string>
+				<key>defaultValue</key>
+				<string>http://myCompany.com/settings/?isRunningInMobileApp=true</string>
+			</dict>
+			<key>hideWebviewToolbar</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>label</key>
+			<string>Google</string>
+			<key>fontAwesomeIcon</key>
+			<string>fa-globe</string>
+			<key>url</key>
+			<string>http://google.com/</string>
+		</dict>
+		<dict>
+			<key>isButtonType</key>
+			<true/>
+			<key>label</key>
+			<string>My Custom Button</string>
+			<key>url</key>
+			<string>http://www.google.com/</string>
+		</dict>
+	</array>
+	<key>defaultHomeServerUnreachableMsg</key>
+	<string>Either your internet connection isn&apos;t great or our servers are having trouble.
+You can try again later, or contact support@myCompany.com if the problem persists.</string>
+	<key>defaultExternalServerUnreachableMsg</key>
+	<string>Either your internet connection isn&apos;t great or %@ are having trouble.
+You can try again later, or contact %@ if the problem persists.</string>
+	<key>supportContactAddress</key>
+	<string>support@myCompany.com</string>
+	<key>domainsUsingJockeyJS</key>
+	<array>
+		<string>myCompany.com</string>
+		<string>10.0.1.1</string>
+	</array>
+	<key>cacheableUrlPatterns-Explanation</key>
+	<string>Note that we intentionally exclude jsonp requests (i.e. API calls) from being cacheable since, due to the querystring &quot;callback&quot; param, those URLs are always unique, so the cached stuff won&apos;t be accessible again.  The javascript is already caching the API stuff that we care about anyway.  The things that we&apos;re not caching (announcements, surveys, etc.) are transient, so it&apos;s good that we&apos;re excluding them from the UI when there is no internet.</string>
+	<key>cacheableUrlPatterns</key>
+	<array>
+		<string>^https?\://[^\.]+\.myCompany\.com((?!\=json\-?p).)*$</string>
+		<string>^https?\://[^\.]+\.google-analytics\.com.*$</string>
+		<string>^https?\://[^\.]+\.newrelic\.com.*$</string>
+		<string>^https?\://10.0.1.2\:8000((?!\=json\-?p).)*$</string>
+	</array>
+	<key>urlAliases</key>
+	<dict>
+		<key>staging</key>
+		<string>http://staging.myCompany.com/?isRunningInMobileApp=true</string>
+		<key>default</key>
+		<string>http://-insertAliasKeyHere-/?isRunningInMobileApp=true</string>
+	</dict>
+	<key>openSidebarFullyBeforeClose</key>
+	<true/>
+	<key>highlightCurrentItemWhenSidebarOpens</key>
+	<false/>
+	<key>animateNavigationBetweenSidebarItems</key>
+	<false/>
+</dict>
+</plist>
