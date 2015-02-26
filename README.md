@@ -1,9 +1,9 @@
 # webwrapper
-A simple iOS app shell that is designed to wrap multiple mobile web sites.  There is a slide-out menu with links for navigating between each website.  It can also be configured to cache the contents of each website for offline viewing.
+This is a simple iOS app shell that is designed to wrap multiple mobile web sites.  There is a slide-out menu with links for navigating between each website.  It can also be configured to cache the contents of each website for offline viewing.
 
 <br>
 See my other jockeyjs-alerts project (https://github.com/t-evans/jockeyjs-alerts) for a javascript 
-library that can send native-style alerts to this up.  It makes use of my fork of Tim Coulter's 
+library that can send native-style alerts to this app.  It makes use of my fork of Tim Coulter's 
 JockeyJS lib (https://github.com/tcoulter/jockeyjs) for communication to/from the web sites
 that are loaded into this app.
 
