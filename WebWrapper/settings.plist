@@ -18,7 +18,7 @@
 			<key>dynamicUrlDescriptor</key>
 			<dict>
 				<key>appPrefId</key>
-				<string>my_app_preff_id</string>
+				<string>my_app_pref_id</string>
 				<key>idOfNavItemToShowIfBlank</key>
 				<string>settings_nav_item</string>
 			</dict>
